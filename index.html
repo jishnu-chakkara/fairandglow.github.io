@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to your custom CSS file -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Favicon for the browser tab -->
+    <link rel="shortcut icon" href="./images/a1.jpg">
+    <!-- Boxicons CSS library for icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Tailwind CSS CDN (Note: You should link to a local installation for production) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Fair&Glow Beauty Clinic</title>
+</head>
+
+<body class="bg-white text-white">
+    <!-- Navigation Bar -->
+    <nav
+        class="p-2 fixed top-0 left-0 w-full backdrop-blur backdrop-opacity-90 transition bg-opacity-50 bg-center bg-cover">
+        <div class="flex items-center justify-between h-12">
+            <!-- Logo -->
+            <img src="./images/logo.png" class="h-24 w-24 p-2" alt="logo">
+            <!-- Hamburger Icon (visible on small screens) -->
+            <div id="menu-icon" class="block md:hidden lg:hidden cursor-pointer text-gray-200">
+                <i class='bx bx-menu-alt-right text-4xl'></i>
+            </div>
+            <!-- Navigation Links (visible on larger screens) -->
+            <div
+                class="hidden space-x-5 font-bold md:flex text-gray-300 mr-4 transition duration-500 {{ scroll ? 'navbar-scroll' : '' }}">
+                <!-- Links with animated underline on hover -->
+                <a href="#" class="group inline-block relative">
+                    <span class="font-bold">Home</span>
+                    <span
+                        class="absolute bottom-0 left-0 w-full h-0.5 bg-[#e200dc] transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+                </a>
+                <a href="#about" class="group inline-block relative">
+                    <span class="font-bold">About</span>
+                    <span
+                        class="absolute bottom-0 left-0 w-full h-0.5 bg-[#e200dc] transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+                </a>
+                <a href="#" class="group inline-block relative">
+                    <span class="font-bold">Service</span>
+                    <span
+                        class="absolute bottom-0 left-0 w-full h-0.5 bg-[#e200dc] transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+                </a>
+                <a href="#" class="group inline-block relative">
+                    <span class="font-bold">Gallery</span>
+                    <span
+                        class="absolute bottom-0 left-0 w-full h-0.5 bg-[#e200dc] transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+                </a>
+                <a href="#" class="group inline-block relative">
+                    <span class="font-bold">Contact</span>
+                    <span
+                        class="absolute bottom-0 left-0 w-full h-0.5 bg-[#e200dc] transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+                </a>
+                <!-- Other navigation links -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Menu (hidden by default) -->
+    <div id="mobile-menu"
+        class="fixed top-0 left-0 h-full w-full bg-[#030a1a]/90 backdrop-blur backdrop-opacity-90 hidden md:hidden z-50">
+        <div class="flex flex-col h-full justify-center items-center">
+            <!-- Mobile navigation links -->
+            <a href="#" class="font-bold text-white hover:text-[#e200dc] py-3 transition-colors duration-200">Home</a>
+            <a href="#" class="font-bold text-white hover:text-[#e200dc] py-3 transition-colors duration-200">About
+                Us</a>
+            <a href="#"
+                class="font-bold text-white hover:text-[#e200dc] py-3 transition-colors duration-200">Service</a>
+            <a href="#"
+                class="font-bold text-white hover:text-[#e200dc] py-3 transition-colors duration-200">Gallery</a>
+            <a href="#" class="font-bold text-white hover:text-[#e200dc] py-3 transition-colors duration-200">Contact
+                Us</a>
+
+            <!-- Other mobile navigation links -->
+            <button id="close-menu"
+                class="mt-4 text-gray-100 hover:text-[hsl(302,100%,44%)] transition-colors duration-200 items-center font-bold ">
+                <!-- Close button icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-14 h-14">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero section -->
+    <section class="h-screen items-center justify-center bg-cover bg-center bg-white/10 bg-opacity-50"
+        style="background-image: url('./images/bg.jpg');">
+        <!-- Content within the hero section -->
+        <section>
+            <div class="grid lg:h-screen max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+                <div class="mr-auto mt-24 lg:mt-12 place-self-center lg:col-span-7">
+                    <!-- Hero title -->
+                    <h1
+                        class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">
+                        Fair&Glow Beauty Clinic</h1>
+                    <!-- Hero description -->
+                    <p class="max-w-2xl mb-6 font-light text-gray-200 lg:mb-8 md:text-lg lg:text-xl ">From checkout to
+                        global sales tax compliance, companies around the world use Flowbite to simplify their payment
+                        stack.</p>
+                    <!-- Call to action button -->
+                    <a href="#"
+                        class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg border hover:bg-[#e200cd] hover:border-none hover:rounded-full transition-all duration-200">
+                        Get started
+                        <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- Hero section ends -->
+    <!-- body part -->
+      <!-- about -->
+      <section id="about">
+        <div class="container py-20 ml-10 mr-10 ">
+            <div class="flex items-center flex-col z-20 md:flex-row ">
+                <div class="text-center mb-12 md:text-left md:w-1/2 md:pr-10">
+                    <h1 class="text-black text-3xl md:text-4xl font-poppins font-bold leading-snug mb-4">Fair&Glow Beauty Clinic</h1>
+                  
+                    <p class="text-black leading-relaxed mb-10">Lorem ipsum dolor sit amet consectetur adipisicing
+                         elit. Doloremque optio, a corporis
+                         veritatis non consequuntur animi, tenetur veniam
+                         recusandae qui expedita sapiente ab blanditiis.
+                          Sit illo doloribus quam dolore a!</p>
+                          <a href="#"
+                        class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-[#e200cd] rounded-lg border border-[#e200cd] hover:bg-[#e200cd] hover:border-none hover:text-white hover:rounded-full transition-all duration-200">
+                        Get started
+                        <i class='bx bxs-chevrons-down' ></i>
+                        
+                    </a>
+
+                </div>
+                <div class="md:w-1/2">
+                  <div class="max-w-md p-8 sm:flex sm:space-x-6 dark:bg-black dark:text-gray-100 mr-4 rounded">
+                    <div class="flex-shrink-0 w-full mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0">
+                      <img src="./images/a1.jpg" alt="" class="object-cover object-center w-full h-full rounded dark:bg-gray-500">
+                    </div>
+                    <div class="flex flex-col space-y-4">
+                      <div>
+                        <h2 class="text-2xl font-semibold uppercase hover:text-[#e200cd]">joycy binoy</h2>
+                        <span class="text-sm dark:text-gray-400">Founder of Fair&glow </span>
+                      </div>
+                      <div class="space-y-1">
+                        <span class="flex items-center space-x-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-label="Email address" class="w-4 h-4">
+                            <path fill="currentColor" d="M274.6,25.623a32.006,32.006,0,0,0-37.2,0L16,183.766V496H496V183.766ZM464,402.693,339.97,322.96,464,226.492ZM256,51.662,454.429,193.4,311.434,304.615,256,268.979l-55.434,35.636L57.571,193.4ZM48,226.492,172.03,322.96,48,402.693ZM464,464H48V440.735L256,307.021,464,440.735Z"></path>
+                          </svg>
+                          <span class="dark:text-gray-400">fairandglowoffical@gmail.com</span>
+                        </span>
+                        <span class="flex items-center space-x-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-label="Phonenumber" class="w-4 h-4">
+                            <path fill="currentColor" d="M449.366,89.648l-.685-.428L362.088,46.559,268.625,171.176l43,57.337a88.529,88.529,0,0,1-83.115,83.114l-57.336-43L46.558,362.088l42.306,85.869.356.725.429.684a25.085,25.085,0,0,0,21.393,11.857h22.344A327.836,327.836,0,0,0,461.222,133.386V111.041A25.084,25.084,0,0,0,449.366,89.648Zm-20.144,43.738c0,163.125-132.712,295.837-295.836,295.837h-18.08L87,371.76l84.18-63.135,46.867,35.149h5.333a120.535,120.535,0,0,0,120.4-120.4v-5.333l-35.149-46.866L371.759,87l57.463,28.311Z"></path>
+                          </svg>
+                          <span class="dark:text-gray-400">+25 381 77 983</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                    
+
+
+                        
+                      
+                      
+                  
+                </div>
+            </div>
+
+        </div>
+      </section>
+      <!-- ----service---- -->
+      <section class="service" id="service">
+        <h1 class="text-black flex justify-center items-start  font-bold uppercase " >Our Services</h1>
+        <p class="text-black px-16">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Expedita facere quaerat unde corporis voluptatibus quia alias veritatis sapiente vel 
+             iusto porro nisi provident quos accusantium, exercitationem dignissimos nemo commodi maiores 
+             esse nihil! Dignissimos eveniet iure soluta molestiae alias necessitatibus molestias harum ab quo debitis
+              corporis in sequi quibusdam quia doloremque, asperiores ut vel, omnis excepturi amet! Repellat,
+               illum quibusdam. Accusamus expedita quibusdam sit facere aut debitis placeat incidunt dignissimos,
+                 quos ad delectus perspiciatis harum nesciunt, vel molestias.</p>
+
+
+      </section>
+      <!-- Gallery -->
+      
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenuButton = document.getElementById('close-menu');
+        let scroll = false;
+
+        // Toggle mobile menu visibility
+        menuIcon.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Hide mobile menu on close button click
+        closeMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Update navigation bar on scroll
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                scroll = true;
+            } else {
+                scroll = false;
+            }
+
+            const navbar = document.querySelector('.navbar-scroll');
+            if (scroll) {
+                navbar.classList.add('bg-white', 'backdrop-blur', 'backdrop-opacity-90');
+            } else {
+                navbar.classList.remove('bg-white', 'backdrop-blur', 'backdrop-opacity-90');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
