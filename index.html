@@ -184,7 +184,7 @@
       class="mt-6 p-2 grid lg:flex gap-2 items-center justify-center text-gray-700"
     >
       <div
-        class="p-6 lg:p-12 shadow-lg w-full lg:w-1/2 h-auto bg-white rounded-lg"
+        class="p-6 lg:p-12 lg:h-96 shadow-lg w-full lg:w-1/2 h-auto bg-white rounded-lg"
       >
         <h3 class="font-bold text-3xl text-center mb-4">About</h3>
         <p class="text-sm lg:text-base">
@@ -199,21 +199,39 @@
           voluptate. Aliqua irure nulla id voluptate. Eu anim eu labore sit
           cillum incididunt.
         </p>
+        <button
+          class="group mt-4 flex items-center gap-2 mx-auto bg-black text-white px-5 py-2 p-2 rounded-lg hover:scale-105 delay-150 transition hover:-translate-y-3"
+        >
+          Download Broschure
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 animate-bounce transition delay-0"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 13.5l3 3m0 0l3-3m-3 3v-6m1.06-4.19l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z"
+            />
+          </svg>
+        </button>
       </div>
-      <div class="mt-4 lg:mt-0">
-        <img
-          src="./images/a1.jpg"
-          class="object-bottom md:object-contain lg:object-contain h-72 lg:h-96 w-full rounded-lg"
-          alt=""
-        />
+      <div class="relative group bg-[url('./images/about-1.jpg')] bg-cover bg-center w-full lg:w-1/2 h-72 lg:h-96 hover:-translate-y-4 delay-75 transition rounded-lg">
+        <div class="absolute inset-0 flex items-end justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-40 transition-opacity rounded-lg">
+          <p class="text-white font-bold text-lg">Our Founder Founder-name</p>
+        </div>
       </div>
+      
+      
     </section>
 
     <!-- about page completed -->
     <!-- section for service section -->
-    <section id="service" class="min-h-screen p-2 text-gray-700 mt-6">
-        <h2 class="text-3xl font-bold text-center">Our Service</h2>
-
+    <section id="service" class="min-h-screen p-2 text-gray-700">
+      <h2 class="text-3xl font-bold text-center">Our Service</h2>
     </section>
     <!-- service section close -->
 
