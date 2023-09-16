@@ -1,0 +1,6 @@
+name
+email
+phone number
+messege
+send btn with icon
+background
