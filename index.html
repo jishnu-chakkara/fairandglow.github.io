@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Link to your custom CSS file -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/gallery.css" />
+  <!-- Favicon for the browser tab -->
+  <link rel="shortcut icon" href="./images/a1.jpg" />
+  <!-- Boxicons CSS library for icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <!-- Tailwind CSS CDN (Note: You should link to a local installation for production) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Fair&Glow Beauty Clinic</title>
+</head>
+
+<body class="bg-white text-white">
+  <!-- Navigation Bar -->
+  <nav class="p-2 w-full backdrop-blur backdrop-opacity-90 transition bg-opacity-50 bg-center bg-cover">
+    <div class="flex items-center justify-between h-12">
+      <!-- Logo -->
+      <img src="./images/logo.png" class="h-24 w-24 p-2" alt="logo" />
+      <!-- Hamburger Icon (visible on small screens) -->
+      <div id="menu-icon" class="block md:hidden lg:hidden cursor-pointer text-gray-900">
+        <i class="bx bx-menu-alt-right text-4xl"></i>
+      </div>
+      <!-- Navigation Links (visible on larger screens) -->
+      <div
+        class="hidden space-x-5 font-bold md:flex text-gray-900 mr-4 transition duration-500 {{ scroll ? 'navbar-scroll' : '' }}">
+        <!-- Links with animated underline on hover -->
+        <a href="#" class="group inline-block relative">
+          <span class="font-bold">Home</span>
+          <span
+            class="absolute bottom-0 left-0 w-full h-0.5 bg-[#e200dc] transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+        </a>
+        <a href="#about" class="group inline-block relative">
+          <span class="font-bold">About</span>
+          <span
+            class="absolute bottom-0 left-0 w-full h-0.5 bg-[#e200dc] transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+        </a>
+        <a href="#" class="group inline-block relative">
+          <span class="font-bold">Service</span>
+          <span
+            class="absolute bottom-0 left-0 w-full h-0.5 bg-[#e200dc] transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+        </a>
+        <a href="#" class="group inline-block relative">
+          <span class="font-bold">Gallery</span>
+          <span
+            class="absolute bottom-0 left-0 w-full h-0.5 bg-[#e200dc] transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+        </a>
+        <a href="#" class="group inline-block relative">
+          <span class="font-bold">Contact</span>
+          <span
+            class="absolute bottom-0 left-0 w-full h-0.5 bg-[#e200dc] transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+        </a>
+        <!-- Other navigation links -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Menu (hidden by default) -->
+  <div id="mobile-menu"
+    class="fixed top-0 left-0 h-full w-full bg-[#030a1a]/90 backdrop-blur backdrop-opacity-90 hidden md:hidden z-50">
+    <div class="flex flex-col h-full justify-center items-center">
+      <!-- Mobile navigation links -->
+      <a href="#" class="font-bold text-white hover:text-[#e200dc] py-3 transition-colors duration-200">Home</a>
+      <a href="#" class="font-bold text-white hover:text-[#e200dc] py-3 transition-colors duration-200">About Us</a>
+      <a href="#" class="font-bold text-white hover:text-[#e200dc] py-3 transition-colors duration-200">Service</a>
+      <a href="#" class="font-bold text-white hover:text-[#e200dc] py-3 transition-colors duration-200">Gallery</a>
+      <a href="#" class="font-bold text-white hover:text-[#e200dc] py-3 transition-colors duration-200">Contact Us</a>
+
+      <!-- Other mobile navigation links -->
+      <button id="close-menu"
+        class="mt-4 text-gray-100 hover:text-[hsl(302,100%,44%)] transition-colors duration-200 items-center font-bold">
+        <!-- Close button icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-14 h-14">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Hero section -->
+  <section class="h-screen items-center justify-center bg-cover bg-center bg-white/10 bg-opacity-50"
+    style="background-image: url('./images/bg.jpg')">
+    <!-- Content within the hero section -->
+    <section>
+      <div class="grid lg:h-screen max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+        <div class="mr-auto mt-24 lg:mt-12 place-self-center lg:col-span-7">
+          <!-- Hero title -->
+          <h1
+            class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">
+            Fair&Glow Beauty Clinic
+          </h1>
+          <!-- Hero description -->
+          <p class="max-w-2xl mb-6 font-light text-gray-200 lg:mb-8 md:text-lg lg:text-xl">
+            we believe that beauty is not just skin deep; it's an experience that encompasses both the body and soul.
+            Step into our serene oasis, where we specialize in enhancing your natural beauty, rejuvenating your spirit,
+            and leaving you feeling refreshed and confident.
+          </p>
+          <!-- Call to action button -->
+          <a href="#"
+            class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg border hover:bg-[#e200cd] hover:border-none hover:rounded-full transition-all duration-200">
+            Get started
+            <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </section>
+  <!-- Hero section ends -->
+  <!-- body part -->
+  <!-- about -->
+  <section id="about" class="mt-6 p-2 grid lg:flex gap-2 items-center justify-center text-gray-700">
+    <div class="pb-10 lg:p-12 lg:h-96 shadow-lg w-full lg:w-1/2 h-auto bg-white rounded-lg">
+      <h3 class="font-bold text-3xl text-center mb-4 ">
+        About
+      </h3>
+      <p class="text-sm lg:text-base  ">
+        Nestled in the vibrant culture of Kerala, Thrissur, Fair & Glow Beauty Clinic offers a refreshing beauty
+        experience in a warm, friendly setting. Our professional team of passionate Beauty Artists is committed to
+        providing top-notch services.
+        <br>
+        Established in 2014 by an internationally certified beautician, we prioritize using high-quality products that
+        match our clients' needs and budgets. Quality is our unwavering standard. Over the years, our loyal clients have
+        been our inspiration to continually innovate our services.
+        <br>
+        At Fair & Glow, we blend education, beauty, people, and fashion to deliver highly personalized services in a
+        welcoming environment. We take pride in offering a wide range of treatments that ensure you leave feeling your
+        best.
+        Discover the world of beauty and relaxation at Fair & Glow Beauty Clinic. Your journey to beauty begins here.
+      </p>
+
+      <!-- <button
+        class="group mt-4 flex items-center gap-2 mx-auto bg-black text-white px-5 py-2 p-2 rounded-lg hover:scale-105 delay-150 transition hover:-translate-y-3">
+        Download Broschure
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6 animate-bounce transition delay-0">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M9 13.5l3 3m0 0l3-3m-3 3v-6m1.06-4.19l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
+        </svg>
+      </button> -->
+    </div>
+    <div
+      class="relative group bg-[url('./images/joycy.jpg')] bg-cover bg-center w-full lg:w-1/2 h-72 lg:h-96 hover:-translate-y-4 delay-75 transition rounded-lg">
+      <div
+        class="absolute inset-0 flex items-end justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-40 transition-opacity rounded-lg">
+        <p class="text-white font-bold text-lg">Our Founder Founder-name</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- about page completed -->
+  <!-- section for service section -->
+  <section id="service" class="min-h-screen p-2 text-gray-700">
+
+    <!-- cards are here  -->
+    <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5">
+      <h2 class="mb-1 text-3xl font-extrabold leading-tight text-gray-900">Services</h2>
+      <p class="mb-12 text-lg text-gray-500">"Here is a few of the awesome Services we provide."</p>
+      <div class="w-full">
+        <div class="flex flex-col w-full mb-10 sm:flex-row">
+          <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
+            <div class="relative h-full ml-0 mr-0 sm:mr-10">
+              <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-pink-500 rounded-lg"></span>
+              <div class="relative h-full p-5 bg-white border-2 border-pink-500 rounded-lg">
+                <div class="flex items-center -mt-1">
+                  <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">BRIDAL MAKE UP</h3>
+                </div>
+                <p class="mt-3 mb-1 text-xs font-medium text-pink-500 uppercase">------------</p>
+                <p class="mb-2 text-gray-600">Elevate your bridal beauty with our expert makeup artists. We specialize
+                  in creating stunning, long-lasting bridal looks tailored to your unique style. From natural elegance
+                  to glamorous sophistication, trust us to make you radiate on your special day. Book now for a bridal
+                  look that will leave a lasting impression.</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full sm:w-1/2">
+            <div class="relative h-full ml-0 md:mr-10">
+              <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-pink-500 rounded-lg"></span>
+              <div class="relative h-full p-5 bg-white border-2 border-pink-500 rounded-lg">
+                <div class="flex items-center -mt-1">
+                  <h3 class="my-2 ml-3 text-lg font-bold text-gray-800"> HAIRCUT AND STYLE</h3>
+                </div>
+                <p class="mt-3 mb-1 text-xs font-medium text-pink-500 uppercase">------------</p>
+                <p class="mb-2 text-gray-600">Experience the artistry of our hairstylists. At Fair & Glow Beauty Clinic,
+                  we specialize in crafting the perfect haircut and style that suits your personality and enhances your
+                  overall appearance. Whether you're seeking a chic, trendy cut, a classic style, or a complete
+                  makeover, our skilled team is here to bring your vision to life. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col w-full mb-5 sm:flex-row">
+          <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
+            <div class="relative h-full ml-0 mr-0 sm:mr-10">
+              <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-pink-500 rounded-lg"></span>
+              <div class="relative h-full p-5 bg-white border-2 border-pink-500 rounded-lg">
+                <div class="flex items-center -mt-1">
+                  <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">HAIR STYLING</h3>
+                </div>
+                <p class="mt-3 mb-1 text-xs font-medium text-pink-500 uppercase">------------</p>
+                <p class="mb-2 text-gray-600">Our skilled team is dedicated to crafting the perfect hairstyle that
+                  complements your individuality and enhances your beauty. Whether you desire a trendy haircut, vibrant
+                  color, or a classic updo. </p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
+            <div class="relative h-full ml-0 mr-0 sm:mr-10">
+              <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-pink-500 rounded-lg"></span>
+              <div class="relative h-full p-5 bg-white border-2 border-pink-500 rounded-lg">
+                <div class="flex items-center -mt-1">
+                  <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">MAKEUP SERVICES</h3>
+                </div>
+                <p class="mt-3 mb-1 text-xs font-medium text-pink-500 uppercase">------------</p>
+                <p class="mb-2 text-gray-600">Experience the transformation with our makeup artistry. Our expert makeup
+                  artists are dedicated to enhancing your natural beauty and creating the perfect look for any occasion.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full sm:w-1/2">
+            <div class="relative h-full ml-0 md:mr-10">
+              <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-pink-500 rounded-lg"></span>
+              <div class="relative h-full p-5 bg-white border-2 border-pink-500 rounded-lg">
+                <div class="flex items-center -mt-1">
+                  <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">SPA SERVICES</h3>
+                </div>
+                <p class="mt-3 mb-1 text-xs font-medium text-pink-500 uppercase">------------</p>
+                <p class="mb-2 text-gray-600">Indulge in tranquility and relaxation with our spa services. Our skilled
+                  therapists are dedicated to revitalizing your senses and restoring your inner balance. </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="relative h-full ml-0 md:mr-10">
+          <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-pink-500 rounded-lg"></span>
+          <div class="relative h-full p-5 bg-white border-2 border-pink-500 rounded-lg">
+            <div class="flex items-center -mt-1">
+              <h3 class="my-2 ml-3 text-lg font-bold text-gray-800">SHAMPOO AND CONDITIONING</h3>
+            </div>
+            <p class="mt-3 mb-1 text-xs font-medium text-pink-500 uppercase">------------</p>
+            <p class="mb-2 text-gray-600">"Treat your hair to the ultimate pampering with our shampoo and conditioning
+              services. At Fair & Glow Beauty Clinic, we understand the importance of healthy, luscious locks. Our
+              expert haircare professionals use premium products and techniques to cleanse, nourish, and rejuvenate your
+              hair. Whether you need deep hydration, repair, or simply a refreshing cleanse, we've got you covered. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- read more btn -->
+    <div class="items-center justify-center flex pt-5 ">
+      <a href="./service.html"
+        class="text-sm lg:text-base font-semibold underline underline decoration-pink-500 text-pink-500 text-center  ">read
+        more<i class='bx bx-chevrons-right'></i></a>
+    </div>
+    </div>
+
+
+    <!-- source:https://tailwind.besoeasy.com -->
+  </section>
+  <!-- Gallery-section  -->
+  <section class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5">
+
+    <h3 class="mb-1 text-3xl font-extrabold leading-tight text-gray-900">
+      Gallery
+    </h3> 
+          <div class="grid grid-cols-4 gap-6  ">
+            <img src="./images/bride1.jpg" class="transition duration-300 ease-in-out hover:scale-110" alt="" oncontextmenu="return false">
+            <img src="./images/img-1.jpg" class="transition duration-300 ease-in-out hover:scale-110" alt="" oncontextmenu="return false" >
+            <img src="./images/img-2.jpg" class="transition duration-300 ease-in-out hover:scale-110" alt="" oncontextmenu="return false">
+            <img src="./images/img-3.JPG" class="transition duration-300 ease-in-out hover:scale-110" alt="" oncontextmenu="return false">
+            <img src="./images/img-4.jpg" class="transition duration-300 ease-in-out hover:scale-110" alt="" oncontextmenu="return false">
+            <img src="./images/img-5.jpg" class="transition duration-300 ease-in-out hover:scale-110" alt="" oncontextmenu="return false">
+            <img src="./images/img-6.jpg" class="transition duration-300 ease-in-out hover:scale-110" alt="" oncontextmenu="return false">
+            <img src="./images/img-8.jpg" class="transition duration-300 ease-in-out hover:scale-110" alt="" oncontextmenu="return false">
+          </div>
+
+
+  </section>
+<<<<<<< HEAD
+               
+               <!-- ====== Contact Section Start -->
+
+               <section class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5">
+                <h3 class="mb-1 text-3xl font-extrabold leading-tight text-gray-900">
+                  Contact Us
+                </h3> 
+                <div class="pb-10 lg:p-12 lg:h-96 shadow-lg w-full lg:w-1/2 h-auto bg-white rounded-lg">
+                  <h4 class="mb-1 text-3xl font-extrabold leading-tight text-gray-900 underline decoration-pink-600">Get in touch us.</h4>
+                  <p class="text-pink-600 pt-4">Lorem, ipsum dolor sit amet consectetur
+                     adipisicing elit. Vitae quam
+                     <br>
+                     recusandae dolorem nihil cumque, autem voluptate nesciunt eius ullam.</p>
+                     <div class="pt-3">
+                      <button
+                      type="button"
+                      data-te-ripple-init
+                      data-te-ripple-color="light"
+                      class="mb-2 inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+                      style="background-color: #D81B60">
+                     
+                      <a href="https://www.instagram.com/fairandglowbeautyclinic">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4"
+                        fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path
+                          d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                      </svg>
+                      </a>
+                    </button>
+                    <button
+                      type="button"
+                      data-te-ripple-init
+                      data-te-ripple-color="light"
+                      class="mb-2 inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+                      style="background-color: #D81B60">
+                     
+                      <a href="https://www.facebook.com/people/Fair-Glow-Beauty-Clinic/100064683676554">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        >
+                         <path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"></path>
+                        </svg>
+                      </a>
+                    </button>
+                    <button
+                      type="button"
+                      data-te-ripple-init
+                      data-te-ripple-color="light"
+                      class="mb-2 inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+                      style="background-color: #D81B60">
+                     
+                      <a href="https://www.youtube.com/channel/UCzjDTojgm0M4GTcZWmtVpEQ">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        >
+                        <path d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765 1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.515 2.515 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831zM9.996 15.005l.005-6 5.207 3.005-5.212 2.995z"></path>
+                        </svg>
+                      </a>
+                    </button>
+                    
+                    <button
+                      type="button"
+                      data-te-ripple-init
+                      data-te-ripple-color="light"
+                      class="mb-2 inline-block rounded-full p-3 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+                      style="background-color: #D81B60">
+                     
+                      <a href="https://wa.me/919074491259">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        >
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.403 5.633A8.919 8.919 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977 0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a8.981 8.981 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.926 8.926 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.446 7.446 0 0 1-3.798-1.041l-.272-.162-2.824.741.753-2.753-.177-.282a7.448 7.448 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.413 7.413 0 0 1 5.275 2.188 7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73-.205-.075-.354-.112-.504.112s-.58.729-.711.879-.262.168-.486.056-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393.112-.131.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666-.181-.435-.366-.377-.504-.383a9.65 9.65 0 0 0-.429-.008.826.826 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321c.112.15 1.582 2.415 3.832 3.387.536.231.954.369 1.279.473.537.171 1.026.146 1.413.089.431-.064 1.327-.542 1.514-1.066.187-.524.187-.973.131-1.067-.056-.094-.207-.151-.43-.263"></path>
+                        </svg>
+                      </a>
+                    </button>
+                 
+
+
+                   </div>
+          
+
+                </div>
+                           
+                 
+
+              </section>
+  
+  <!-- component -->
+  <script>
+    const menuIcon = document.getElementById("menu-icon");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const closeMenuButton = document.getElementById("close-menu");
+    let scroll = false;
+
+    // Toggle mobile menu visibility
+    menuIcon.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Hide mobile menu on close button click
+    closeMenuButton.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
+
+    // Update navigation bar on scroll
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        scroll = true;
+      } else {
+        scroll = false;
+      }
+
+      const navbar = document.querySelector(".navbar-scroll");
+      if (scroll) {
+        navbar.classList.add(
+          "bg-white",
+          "backdrop-blur",
+          "backdrop-opacity-90"
+        );
+      } else {
+        navbar.classList.remove(
+          "bg-white",
+          "backdrop-blur",
+          "backdrop-opacity-90"
+        );
+      }
+    });
+
+    // @dev auto sliding js
+
+    let slides = document.getElementsByClassName("slider__slide");
+    let navlinks = document.getElementsByClassName("slider__navlink");
+    let currentSlide = 0;
+
+    document
+      .getElementById("nav-button--next")
+      .addEventListener("click", () => {
+        changeSlide(currentSlide + 1);
+      });
+    document
+      .getElementById("nav-button--prev")
+      .addEventListener("click", () => {
+        changeSlide(currentSlide - 1);
+      });
+
+    function changeSlide(moveTo) {
+      if (moveTo >= slides.length) {
+        moveTo = 0;
+      }
+      if (moveTo < 0) {
+        moveTo = slides.length - 1;
+      }
+
+      slides[currentSlide].classList.toggle("active");
+      navlinks[currentSlide].classList.toggle("active");
+      slides[moveTo].classList.toggle("active");
+      navlinks[moveTo].classList.toggle("active");
+
+      currentSlide = moveTo;
+    }
+
+    document
+      .querySelectorAll(".slider__navlink")
+      .forEach((bullet, bulletIndex) => {
+        bullet.addEventListener("click", () => {
+          if (currentSlide !== bulletIndex) {
+            changeSlide(bulletIndex);
+          }
+        });
+      });
+  </script>
+</body>
+
+</html>
